@@ -1,3 +1,39 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class="container">
+  {{simple-typeahead
+    value=userQueryString
+    placeholder='Search for users...'
+    items=users
+    onValueChange=(action 'searchForUsers')
+    onItemEnter=(action 'addUser')
+    clear=(action 'clear')
+  }}
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, ducimus consectetur sed debitis id, provident sint officia tempora eius enim tempore expedita deserunt neque ipsum nulla asperiores dicta, alias rem.</p>
+</div>
 
-{{outlet}}
+{{!--
+  {{#simple-typeahead
+    value=userQueryString
+    placeholder='Search for users...'
+    items=users
+    onValueChange=(action 'searchForUsers')
+    onItemEnter=(action 'addUser')
+    clear=(action 'clear')
+    as |input|
+  }}
+    {{#input.message}}
+      {{#if loadingUsers}}
+        <p>loading...</p>
+      {{else if loadingUsersError}}
+        <p class="warning">Error Loading Users</p>
+      {{else if searchIsEmpty}}
+        <p>No users match the query <strong>{{userQueryString}}</strong></p>
+      {{/if}}
+    {{/input.message}}
+
+    {{#input.list as |list|}}
+      {{#list.item as |user|}}
+        {{user.label}}
+      {{/list.item}}
+    {{/input.list}}
+  {{/simple-typeahead}}
+  --}}
