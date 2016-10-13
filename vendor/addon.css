@@ -24,14 +24,12 @@
 
 .typeahead-input .typeahead-input-content {
   position: absolute;
-  left: 0;
-  right: 0;
-  /*width: 100%;*/
+  width: 100%;
+  box-sizing: border-box;
   background-color: white;
   border: 1px solid #ccc;
   border-top: 0;
   max-height: 500px;
-  min-height: 36px;
   overflow-y: auto;
   z-index: 1;
   }
