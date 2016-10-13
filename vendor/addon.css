@@ -1,0 +1,52 @@
+.typeahead-input {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.typeahead-input input {
+  box-sizing: border-box;
+  width: calc(100% - 16px);
+}
+
+.typeahead-input button.clear-typeahead-input {
+  height: 19px;
+  width: 16px;
+  float: right;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-left: 0;
+  cursor: pointer;
+  padding: 0;
+  }
+  .typeahead-input button.clear-typeahead-input:hover {
+    color: #bbb;
+  }
+
+.typeahead-input .typeahead-input-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /*width: 100%;*/
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: 0;
+  max-height: 500px;
+  min-height: 36px;
+  overflow-y: auto;
+  z-index: 1;
+  }
+  .typeahead-input .typeahead-input-content ul {
+    padding: 0;
+    margin: 0;
+  }
+  .typeahead-input .typeahead-input-content ul li {
+    cursor: pointer;
+    padding: 2px;
+    background-color: #f7f7f7;
+  }
+  .typeahead-input .typeahead-input-content ul li:hover {
+    background-color: #eee;
+  }
+  .typeahead-input .typeahead-input-content ul li.active {
+    background-color: #ddd;
+  }

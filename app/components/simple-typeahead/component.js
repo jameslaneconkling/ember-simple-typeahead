@@ -1,0 +1,1 @@
+export { default } from 'ember-simple-typeahead/components/simple-typeahead/component';
