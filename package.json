@@ -1,7 +1,7 @@
 {
   "name": "ember-simple-typeahead",
   "version": "0.0.1",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "A minimal typeahead component that tries its best not to make unfounded assumptions about your data.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,14 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
   "engines": {
     "node": ">= 0.10.0"
   },
   "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jameslaneconkling/ember-simple-typeahead"
+  },
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
@@ -37,7 +40,12 @@
     "ember-try": "~0.0.8"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "typeahead",
+    "ember",
+    "input",
+    "form",
+    "autocomplete"
   ],
   "dependencies": {
     "ember-cli-htmlbars": "^1.0.1",
