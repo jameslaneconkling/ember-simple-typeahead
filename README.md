@@ -1,26 +1,44 @@
 # Ember-simple-typeahead
+A lightweight, highly functional typeahead component for select or autocomplete forms and the like.
 
-This README outlines the details of collaborating on this Ember addon.
+Ember-simple-typeahead makes very few assumptions about what to display and when, relying instead on the developer to handle all application-domain logic like data fetching, formatting, and filtering.
+
+The component has no external, non-ember dependencies.
+
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+```bash
+ember install ember-simple-typeahead
+```
 
-## Running
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+## Usage
+```hbs
+{{#typeahead-input
+  value=userQueryString
+  placeholder='Search for users...'
+  items=systemUsers
+  onValueChange=(action 'searchForSystemUsers')
+  onItemEnter=(action 'addUserToWorkspace')
+  as |input|
+}}
 
-## Running Tests
+  {{#input.message}}
+    {{#if loadingSystemUsers}}
+      <div class="loading-spinner-container">{{x-spinner color='#aaa' radius=4}}</div>
+    {{else if loadingSystemUsersError}}
+      <p class="warning">Error Loading Users</p>
+    {{else if (eq systemUsers.length 0)}}
+      <p>No users match the query <strong>{{userQueryString}}</strong></p>
+    {{/if}}
+  {{/input.message}}
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+  {{#input.list as |list|}}
+    {{#list.item as |user|}}
+      {{user.label}}
+    {{/list.item}}
+  {{/input.list}}
 
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+{{/typeahead-input}}
+```
