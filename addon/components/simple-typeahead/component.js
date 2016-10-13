@@ -11,7 +11,7 @@ export default Ember.Component.extend({
   clear() { /*noop*/ },
   onItemEnter() { /*noop*/ },
 
-  // valueIsEmpty: Ember.computed.not('value'),
+  valueIsEmpty: Ember.computed.not('value'),
 
   forwardSelect() {
     this.set('selectionIdx', Math.min(this.get('items.length') - 1 || 0, this.get('selectionIdx') + 1));

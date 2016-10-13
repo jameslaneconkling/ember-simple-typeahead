@@ -49,6 +49,9 @@
   .typeahead-input button.clear-typeahead-input:hover {
     color: #bbb;
   }
+  .typeahead-input button.clear-typeahead-input[disabled] {
+    cursor: not-allowed;
+  }
 
 .typeahead-input .typeahead-input-content {
   position: absolute;
