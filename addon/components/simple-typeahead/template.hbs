@@ -1,12 +1,14 @@
-<input
-  type='text'
-  value={{value}}
-  placeholder={{placeholder}}
-  oninput={{action 'input'}}
-  onkeydown={{action 'keydown'}}
-/>
+<div class="input">
+  <input
+    type='text'
+    value={{value}}
+    placeholder={{placeholder}}
+    oninput={{action 'input'}}
+    onkeydown={{action 'keydown'}}
+  />
 
-<button title='clear input' class='clear-typeahead-input' disabled={{valueIsEmpty}} {{action 'clear'}}>x</button>
+  <button title='clear input' class='clear-typeahead-input' disabled={{valueIsEmpty}} {{action 'clear'}}>&#10005;</button>
+</div>
 
 {{#if value}}
   <div class="typeahead-input-content">
