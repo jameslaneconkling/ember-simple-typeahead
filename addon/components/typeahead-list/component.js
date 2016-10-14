@@ -3,6 +3,7 @@ import layout from './template';
 
 export default Ember.Component.extend({
   layout,
-  tagName: 'ul'
+  tagName: 'ul',
+  classNames: ['typeahead-list']
 });
 

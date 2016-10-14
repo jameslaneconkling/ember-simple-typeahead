@@ -35,21 +35,20 @@
   padding: 1px 4px;
 }
 
-.typeahead-input button.clear-typeahead-input {
+.typeahead-input .clear-typeahead-input {
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
   width: 16px;
   background-color: transparent;
-  font-size: 10px;
   cursor: pointer;
   padding: 0;
   }
-  .typeahead-input button.clear-typeahead-input:hover {
+  .typeahead-input .clear-typeahead-input:hover {
     color: #bbb;
   }
-  .typeahead-input button.clear-typeahead-input[disabled] {
+  .typeahead-input .clear-typeahead-input[disabled] {
     cursor: not-allowed;
   }
 
@@ -64,18 +63,18 @@
   overflow-y: auto;
   z-index: 1;
   }
-  .typeahead-input .typeahead-input-content ul {
+  .typeahead-input .typeahead-list {
     padding: 0;
     margin: 0;
   }
-  .typeahead-input .typeahead-input-content ul li {
+  .typeahead-input .typeahead-list .typeahead-item {
     cursor: pointer;
     padding: 2px;
-    background-color: #f7f7f7;
+    background-color: white;
   }
-  .typeahead-input .typeahead-input-content ul li:hover {
+  .typeahead-input .typeahead-list .typeahead-item:hover {
     background-color: #eee;
   }
-  .typeahead-input .typeahead-input-content ul li.active {
+  .typeahead-input .typeahead-list .typeahead-item.active {
     background-color: #ddd;
   }

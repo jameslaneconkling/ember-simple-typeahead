@@ -1,6 +1,12 @@
 body {
   font-family: sans-serif;
-  font-size: 12px;
+  font-size: 14px;
+}
+.limiter {
+  position: relative;
+  width: 50%;
+  max-width: 520px;
+  margin: 0 auto;
 }
 .container {
   width: 300px;
