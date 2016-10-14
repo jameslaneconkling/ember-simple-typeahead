@@ -46,6 +46,12 @@ export default Ember.Component.extend({
       }
     },
 
+    onItemClick(item, idx) {
+      this.$('input').focus();
+      this.set('selectionIdx', idx);
+      this.get('onItemEnter')(item)
+    },
+
     clear() {
       this.set('value', '');
       this.get('clear')();

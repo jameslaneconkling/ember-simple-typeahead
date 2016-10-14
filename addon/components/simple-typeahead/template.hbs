@@ -14,7 +14,7 @@
   <div class="typeahead-input-content">
     {{yield (hash
       message=(component 'block-component')
-      list=(component 'typeahead-list' items=items onItemEnter=attrs.onItemEnter selectionIdx=selectionIdx)
+      list=(component 'typeahead-list' items=items onItemClick=(action 'onItemClick') selectionIdx=selectionIdx)
     )}}
   </div>
 {{/if}}
