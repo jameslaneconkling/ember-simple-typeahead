@@ -35,7 +35,7 @@
   padding: 1px 4px;
 }
 
-.typeahead-input .clear-typeahead-input {
+.typeahead-input .clear {
   position: absolute;
   right: 0;
   top: 0;
@@ -44,15 +44,16 @@
   background-color: transparent;
   cursor: pointer;
   padding: 0;
+  font-size: 10px;
   }
-  .typeahead-input .clear-typeahead-input:hover {
+  .typeahead-input .clear:hover {
     color: #bbb;
   }
-  .typeahead-input .clear-typeahead-input[disabled] {
+  .typeahead-input .clear[disabled] {
     cursor: not-allowed;
   }
 
-.typeahead-input .typeahead-input-content {
+.typeahead-input .content {
   position: absolute;
   width: 100%;
   box-sizing: border-box;
@@ -63,18 +64,18 @@
   overflow-y: auto;
   z-index: 1;
   }
-  .typeahead-input .typeahead-list {
+  .typeahead-input .list {
     padding: 0;
     margin: 0;
   }
-  .typeahead-input .typeahead-list .typeahead-item {
+  .typeahead-input .item {
     cursor: pointer;
-    padding: 2px;
+    padding: 4px 8px;
     background-color: white;
   }
-  .typeahead-input .typeahead-list .typeahead-item:hover {
+  .typeahead-input .item:hover {
     background-color: #eee;
   }
-  .typeahead-input .typeahead-list .typeahead-item.active {
+  .typeahead-input .item.active {
     background-color: #ddd;
   }

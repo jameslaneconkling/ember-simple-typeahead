@@ -4,6 +4,6 @@ import layout from './template';
 export default Ember.Component.extend({
   layout,
   tagName: 'ul',
-  classNames: ['typeahead-list']
+  classNames: ['list']
 });
 
