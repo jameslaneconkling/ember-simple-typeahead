@@ -1,0 +1,7 @@
+{{#each items as |item idx|}}
+  <li class="{{if (eq idx selectionIdx) 'active'}}" {{action attrs.onItemEnter item}}>
+    {{yield (hash
+      item=(component 'block-component' content=item)
+    )}}
+  </li>
+{{/each}}

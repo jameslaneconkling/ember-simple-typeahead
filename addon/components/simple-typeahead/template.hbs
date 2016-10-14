@@ -10,34 +10,11 @@
   <button title='clear input' class='clear-typeahead-input' disabled={{valueIsEmpty}} {{action 'clear'}}>&#10005;</button>
 </div>
 
-{{!--
 {{#if value}}
   <div class="typeahead-input-content">
     {{yield (hash
       message=(component 'block-component')
-      list=(component 'block-component' items=items onItemEnter=attrs.onItemEnter selectionIdx=selectionIdx)
+      list=(component 'typeahead-list' items=items onItemEnter=attrs.onItemEnter selectionIdx=selectionIdx)
     )}}
   </div>
 {{/if}}
-
-
-{{#if value}}
-  <div class="typeahead-input-content">
-
-    {{yield (hash
-      message=(component 'block-component')
-      items=(component 'noop-component')
-    )}}
-
-    <ul>
-      {{#each content as |item idx|}}
-        <li class="{{if (eq idx selectionIdx) 'active'}}" {{action attrs.onItemEnter item}}>
-          {{yield (hash
-            contentItem=(component 'block-component' content=item)
-          )}}
-        </li>
-      {{/each}}
-    </ul>
-  </div>
-{{/if}}
---}}
