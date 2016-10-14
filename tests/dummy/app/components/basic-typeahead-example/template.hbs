@@ -1,0 +1,15 @@
+{{#simple-typeahead
+  value=userQueryString
+  placeholder='Search for users...'
+  items=users
+  onValueChange=(action 'searchForUsers')
+  onItemEnter=(action 'addUser')
+  clear=(action 'clear')
+  as |input|
+}}
+  {{#input.list as |list|}}
+    {{#list.item as |user|}}
+      {{user}}
+    {{/list.item}}
+  {{/input.list}}
+{{/simple-typeahead}}

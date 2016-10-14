@@ -5,23 +5,8 @@ const USERS = ['The Viscount Brouncker', 'Sir Joseph Williamson', 'Sir Christoph
 
 export default Ember.Component.extend({
   userQueryString: '',
-  loadingUsers: false,
-  loadingUsersError: false,
-
-  searchIsEmpty: Ember.computed.equal('users.length', 0),
 
   users: [],
-
-  queryUsers(queryString, cb) {
-    Ember.run.debounce(this, this._queryUsers, {queryString, cb}, 200);
-  },
-
-  _queryUsers({queryString, cb}) {
-    setTimeout(() => {
-      const users = USERS.filter(user => new RegExp(queryString.split('').join('.*')).test(user));
-      cb(users);
-    }, 1);
-  },
 
   actions: {
     searchForUsers(queryString) {
@@ -31,12 +16,7 @@ export default Ember.Component.extend({
         return;
       }
 
-      this.set('loadingUsers', true);
-
-      this.queryUsers(queryString, users => {
-        this.set('users', users);
-        this.set('loadingUsers', false);
-      });
+      this.set('users', USERS.filter(user => new RegExp(queryString.split('').join('.*')).test(user)));
     },
 
     clear() {
