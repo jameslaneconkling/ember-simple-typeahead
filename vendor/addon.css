@@ -2,10 +2,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 .typeahead-input,
 .typeahead-input input,
-.typeahead-input button,
 .typeahead-input div,
 .typeahead-input ul,
 .typeahead-input li {
@@ -34,23 +32,20 @@
   width: calc(100% - 16px);
   padding: 1px 4px;
 }
-
-.typeahead-input .clear {
+.typeahead-input .input .clear {
   position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 16px;
-  background-color: transparent;
+  top: 0.5em;
+  right: 0.5em;
   cursor: pointer;
-  padding: 0;
-  font-size: 10px;
+}
+.typeahead-input .input .clear svg {
+  vertical-align: middle;
   }
-  .typeahead-input .clear:hover {
-    color: #bbb;
+.typeahead-input .input .clear svg path {
+  fill: #ccc;
   }
-  .typeahead-input .clear[disabled] {
-    cursor: not-allowed;
+.typeahead-input .input .clear:hover svg path{
+  fill: #333;
   }
 
 .typeahead-input .content {

@@ -7,11 +7,15 @@ export default Ember.Component.extend({
 
   value: '',
   selectionIdx: -1,
+  canReset: true,
+  showReset: Ember.computed('canReset', 'hasValue', function() {
+    return this.get('canReset') && this.get('hasValue');
+  }),
 
   clear() { /*noop*/ },
   onItemEnter() { /*noop*/ },
 
-  valueIsEmpty: Ember.computed.not('value'),
+  hasValue: Ember.computed.notEmpty('value'),
 
   forwardSelect() {
     this.set('selectionIdx', Math.min(this.get('items.length') - 1 || 0, this.get('selectionIdx') + 1));
