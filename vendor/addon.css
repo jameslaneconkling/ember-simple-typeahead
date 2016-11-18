@@ -19,18 +19,15 @@
 	list-style: none;
 }
 
-
-.typeahead-input {
-  position: relative;
-}
-
+/* Addon Styles */
 .typeahead-input .input {
+  position: relative;
   border: 1px solid #ccc;
 }
-
-.typeahead-input input {
-  width: calc(100% - 16px);
-  padding: 1px 4px;
+.typeahead-input .input input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5em 1.5em 0.5em 1em;
 }
 .typeahead-input .input .clear {
   position: absolute;
@@ -40,37 +37,34 @@
 }
 .typeahead-input .input .clear svg {
   vertical-align: middle;
-  }
+}
 .typeahead-input .input .clear svg path {
   fill: #ccc;
-  }
+}
 .typeahead-input .input .clear:hover svg path{
   fill: #333;
-  }
+}
 
 .typeahead-input .content {
-  position: absolute;
-  width: 100%;
-  box-sizing: border-box;
   background-color: white;
   border: 1px solid #ccc;
-  border-top: 0;
-  max-height: 500px;
+  border-top: none;
+  max-height: 300px;
   overflow-y: auto;
   z-index: 1;
-  }
-  .typeahead-input .list {
-    padding: 0;
-    margin: 0;
-  }
-  .typeahead-input .item {
-    cursor: pointer;
-    padding: 4px 8px;
-    background-color: white;
-  }
-  .typeahead-input .item:hover {
-    background-color: #eee;
-  }
-  .typeahead-input .item.active {
-    background-color: #ddd;
-  }
+}
+.typeahead-input .content .list {
+  padding: 0;
+  margin: 0;
+}
+.typeahead-input .content .list .item {
+  cursor: pointer;
+  padding: 4px 8px;
+  background-color: white;
+}
+.typeahead-input .content .list .item:hover {
+  background-color: #eee;
+}
+.typeahead-input .content .list .item.active {
+  background-color: #ddd;
+}

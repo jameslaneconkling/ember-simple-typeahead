@@ -58,6 +58,7 @@ export default Ember.Component.extend({
 
     clear() {
       this.set('value', '');
+      this.get('onValueChange')('');
       this.get('clear')();
     }
   }

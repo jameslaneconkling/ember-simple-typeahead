@@ -1,11 +1,12 @@
 <div class="input">
-  <input
+  {{input
     type='text'
-    value={{value}}
-    placeholder={{placeholder}}
-    oninput={{action 'input'}}
-    onkeydown={{action 'keydown'}}
-  />
+    spellcheck=false
+    value=value
+    placeholder=placeholder
+    input=(action 'input')
+    keyDown=(action 'keydown')
+  }}
 
   {{#if showReset}}
     <i title='clear input' class='clear' {{action 'clear'}}>
@@ -18,7 +19,7 @@
   {{/if}}
 </div>
 
-{{#if value}}
+{{#if items}}
   <div class="content">
     {{yield (hash
       message=(component 'block-component')
