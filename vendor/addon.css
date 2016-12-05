@@ -2,10 +2,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 .typeahead-input,
 .typeahead-input input,
-.typeahead-input button,
 .typeahead-input div,
 .typeahead-input ul,
 .typeahead-input li {
@@ -21,61 +19,52 @@
 	list-style: none;
 }
 
-
-.typeahead-input {
-  position: relative;
-}
-
+/* Addon Styles */
 .typeahead-input .input {
+  position: relative;
   border: 1px solid #ccc;
 }
-
-.typeahead-input input {
-  width: calc(100% - 16px);
-  padding: 1px 4px;
-}
-
-.typeahead-input .clear {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 16px;
-  background-color: transparent;
-  cursor: pointer;
-  padding: 0;
-  font-size: 10px;
-  }
-  .typeahead-input .clear:hover {
-    color: #bbb;
-  }
-  .typeahead-input .clear[disabled] {
-    cursor: not-allowed;
-  }
-
-.typeahead-input .content {
-  position: absolute;
+.typeahead-input .input input {
   width: 100%;
   box-sizing: border-box;
+  padding: 0.5em 1.5em 0.5em 1em;
+}
+.typeahead-input .input .clear {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  cursor: pointer;
+}
+.typeahead-input .input .clear svg {
+  vertical-align: middle;
+}
+.typeahead-input .input .clear svg path {
+  fill: #ccc;
+}
+.typeahead-input .input .clear:hover svg path{
+  fill: #333;
+}
+
+.typeahead-input .content {
   background-color: white;
   border: 1px solid #ccc;
-  border-top: 0;
-  max-height: 500px;
+  border-top: none;
+  max-height: 300px;
   overflow-y: auto;
   z-index: 1;
-  }
-  .typeahead-input .list {
-    padding: 0;
-    margin: 0;
-  }
-  .typeahead-input .item {
-    cursor: pointer;
-    padding: 4px 8px;
-    background-color: white;
-  }
-  .typeahead-input .item:hover {
-    background-color: #eee;
-  }
-  .typeahead-input .item.active {
-    background-color: #ddd;
-  }
+}
+.typeahead-input .content .list {
+  padding: 0;
+  margin: 0;
+}
+.typeahead-input .content .list .item {
+  cursor: pointer;
+  padding: 4px 8px;
+  background-color: white;
+}
+.typeahead-input .content .list .item:hover {
+  background-color: #eee;
+}
+.typeahead-input .content .list .item.active {
+  background-color: #ddd;
+}
