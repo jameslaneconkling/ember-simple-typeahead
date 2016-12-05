@@ -11,3 +11,13 @@ body {
 .container {
   width: 300px;
 }
+
+.custom-clear-typeahead .clear svg {
+  padding: 0.5rem;
+}
+.custom-clear-typeahead .clear svg path {
+  fill: #ccc;
+}
+.custom-clear-typeahead .clear:hover svg path {
+  fill: #333;
+}

@@ -1,6 +1,6 @@
 {
   "name": "ember-simple-typeahead",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A minimal typeahead component that tries its best not to make unfounded assumptions about your data.",
   "directories": {
     "doc": "doc",

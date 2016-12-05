@@ -24,7 +24,8 @@ export default Ember.Component.extend({
     },
 
     addUser(user) {
-      console.log('add user', user);
+      this.set('userQueryString', user);
+      this.set('users', []);
     }
   }
 });
