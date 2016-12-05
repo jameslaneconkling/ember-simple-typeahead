@@ -7,7 +7,7 @@
     onkeydown={{action 'keydown'}}
   />
 
-  <button title='clear input' class='clear' disabled={{valueIsEmpty}} {{action 'clear'}}>&#10005;</button>
+  <button title='clear input' class='clear' disabled={{valueIsEmpty}} {{action 'clear'}}>{{{clearButton}}}</button>
 </div>
 
 {{#if value}}

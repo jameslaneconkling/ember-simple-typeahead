@@ -5,6 +5,8 @@ export default Ember.Component.extend({
   layout,
   classNames: ['typeahead-input'],
 
+  clearButton: '&#10005;',
+
   value: '',
   selectionIdx: -1,
 
