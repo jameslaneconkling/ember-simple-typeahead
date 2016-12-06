@@ -4,6 +4,7 @@
 */
 .typeahead-input,
 .typeahead-input input,
+.typeahead-input button,
 .typeahead-input div,
 .typeahead-input ul,
 .typeahead-input li {
@@ -33,7 +34,7 @@
   box-sizing: border-box;
   padding: 0.5rem 1.5rem 0.5rem 1rem;
 }
-.typeahead-input .input .clear {
+.typeahead-input .clear {
   position: absolute;
   right: 0;
   top: 0;
@@ -44,6 +45,13 @@
   padding: 0;
   font-size: 14px;
   }
+
+.typeahead-input .clear[disabled] {
+  color: #bbb;
+}
+.typeahead-input .clear[disabled]:hover {
+  cursor: not-allowed;
+ }
 
 .typeahead-input .content {
   position: absolute;
