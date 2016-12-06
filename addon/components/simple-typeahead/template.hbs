@@ -8,7 +8,15 @@
     keydown=(action 'keydown')
   }}
 
-  <button title='clear input' class='clear' disabled={{valueIsEmpty}} {{action 'clear'}}>{{{clearButton}}}</button>
+  {{#if canReset}}
+    <button
+      title='clear input'
+      class='clear'
+      disabled={{valueIsEmpty}}
+      {{action 'clear'}}>
+        {{{clearButton}}}
+    </button>
+  {{/if}}
 </div>
 
 {{#if value}}
