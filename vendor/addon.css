@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 .typeahead-input,
 .typeahead-input input,
 .typeahead-input button,
@@ -35,7 +34,6 @@
   box-sizing: border-box;
   padding: 0.5rem 1.5rem 0.5rem 1rem;
 }
-
 .typeahead-input .clear {
   position: absolute;
   right: 0;
@@ -47,12 +45,11 @@
   padding: 0;
   font-size: 14px;
   }
-  .typeahead-input .clear:hover {
-    color: #bbb;
-  }
-  .typeahead-input .clear[disabled] {
-    cursor: not-allowed;
-  }
+
+.typeahead-input .clear[disabled] {
+  color: #bbb;
+  cursor: not-allowed;
+ }
 
 .typeahead-input .content {
   position: absolute;
