@@ -1,11 +1,12 @@
 <div class="input">
-  <input
+  {{input
     type='text'
-    value={{value}}
-    placeholder={{placeholder}}
-    oninput={{action 'input'}}
-    onkeydown={{action 'keydown'}}
-  />
+    spellcheck=false
+    value=value
+    placeholder=placeholder
+    input=(action 'input')
+    keydown=(action 'keydown')
+  }}
 
   <button title='clear input' class='clear' disabled={{valueIsEmpty}} {{action 'clear'}}>{{{clearButton}}}</button>
 </div>
