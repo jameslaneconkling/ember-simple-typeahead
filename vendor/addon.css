@@ -48,8 +48,6 @@
 
 .typeahead-input .clear[disabled] {
   color: #bbb;
-}
-.typeahead-input .clear[disabled]:hover {
   cursor: not-allowed;
  }
 
